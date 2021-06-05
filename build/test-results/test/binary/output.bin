@@ -1,0 +1,22 @@
+set up
+
+map capacity:4
+map loadFactor:1.0
+map threshold:4
+-map table:[Ljava.util.HashMap$Node;@33a39cef
+map size:2
+
+map capacity:4
+map loadFactor:1.0
+map threshold:4
+-map table:[Ljava.util.HashMap$Node;@33a39cef
+map size:3
+
+map capacity:4
+map loadFactor:1.0
+map threshold:4
+-map table:[Ljava.util.HashMap$Node;@33a39cef
+map size:4
+
+
+tear down
