@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="bean.xml"/>
+
+    <bean id="teacher" class="com.zhuzhu.spring.Teacher">
+        <property name="id" value="123"/>
+    </bean>
+
+    <bean id="student" class="com.zhuzhu.spring.Student">
+        <property name="name" value="zhuzhu"/>
+        <property name="teacher" ref="teacher"/>
+
+        <property name="friends">
+            <array>
+                <value>张三</value>
+                <value>李四</value>
+                <value>王五</value>
+                <value>小明</value>
+            </array>
+        </property>
+
+        <property name="subjects">
+            <list>
+                <value>语文</value>
+                <value>数学</value>
+                <value>英语</value>
+            </list>
+        </property>
+
+        <property name="books">
+            <map>
+                <entry key="历史类" value="《明朝那些事儿》"/>
+                <entry key="小说类" value="《水浒传》"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- p命名空间注入属性 -->
+    <bean id="teacher1" class="com.zhuzhu.spring.Teacher" p:id="111"/>
+
+    <!-- c命名空间通过构造器注入 -->
+    <bean id="teacher2" class="com.zhuzhu.spring.Teacher" c:id="222"/>
 
 </beans>

@@ -21,5 +21,17 @@ public class Main {
 		System.out.println(zhuzhu);
 
 		System.out.println(human1);
+
+		System.out.println("********************************");
+
+		Student student = (Student) context.getBean("student");
+		System.out.println(student);
+
+		System.out.println("********************************");
+
+		Teacher teacher1 = context.getBean("teacher1", Teacher.class);
+		Teacher teacher2 = context.getBean("teacher2", Teacher.class);
+		System.out.println(teacher1);
+		System.out.println(teacher2);
 	}
 }

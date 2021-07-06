@@ -3,16 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <beans>
+    <bean id="human" class="com.zhuzhu.spring.Human" name="zhuzhu">
+        <property name="name" value="zhuzhu"/>
+    </bean>
 
-        <bean id="human" class="com.zhuzhu.spring.Human" name="zhuzhu">
-            <property name="name" value="zhuzhu"/>
-        </bean>
-
-        <bean id="human1" class="com.zhuzhu.spring.Human">
-            <constructor-arg name="name" value="zhuzhu1"/>
-        </bean>
-
-    </beans>
+    <bean id="human1" class="com.zhuzhu.spring.Human">
+        <constructor-arg name="name" value="zhuzhu1"/>
+    </bean>
 
 </beans>
