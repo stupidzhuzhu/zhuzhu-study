@@ -11,7 +11,4 @@ public class GC5Test {
 	 * VM参数：-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
 	 */
 
-
-
-
 }

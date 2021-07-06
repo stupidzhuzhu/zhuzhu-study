@@ -14,10 +14,13 @@ public class GC3Test {
 	private final static int SIZE_1M = 1024 * 1024;
 
 	public static void main(String[] args) {
-		byte[] array1 = new byte[1 * SIZE_1M];
+		byte[] array1 = new byte[500 * SIZE_1K];
 		byte[] array2 = new byte[6 * SIZE_1M];
+		array2 = null;
+		byte[] array3 = new byte[6 * SIZE_1M];
+		array3 = null;
 		// 发生Minor GC, array1和array2都被移至老年代，然后在Eden区为array3分配内存
-		byte[] array3 = new byte[2 * SIZE_1M];
+		byte[] array4 = new byte[3 * SIZE_1M];
 	}
 
 	/**
